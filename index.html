@@ -1,41 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-IN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Trendora | Discover Beautiful Home Finds</title>
+  <title>Trendora India | Stylish & Affordable Home Decor Finds</title>
 
-  <meta
-    name="description"
-    content="Trendora helps you discover stylish, affordable and trending home decor products."
-  />
+  <meta name="description" content="Trendora India discovers stylish, practical and affordable home decor, organization, kitchen and bedroom products for modern Indian homes.">
 
-  <meta
-    name="keywords"
-    content="home decor, home accessories, bedroom decor, living room decor, Amazon home decor"
-  />
+  <meta name="keywords" content="home decor India, affordable home decor, Amazon home decor India, kitchen organizers, bedroom decor, living room decor">
+
+  <meta name="robots" content="index, follow">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
 
     :root {
-      --cream: #f8f5ef;
-      --white: #ffffff;
-      --dark: #24221f;
-      --brown: #795548;
-      --light-brown: #b69b86;
-      --border: #e6dfd6;
+      --bg: #f8f5ef;
+      --card: #ffffff;
+      --ink: #24211e;
+      --muted: #6e6963;
+      --accent: #8a6249;
+      --soft: #eee5dc;
+      --line: #e5ddd4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
+      background: var(--bg);
+      color: var(--ink);
       line-height: 1.6;
     }
 
@@ -44,338 +46,348 @@
       color: inherit;
     }
 
-    /* NAVBAR */
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
 
     nav {
       height: 72px;
-      background: rgba(255,255,255,0.95);
-      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
 
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      padding: 0 7%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      width: 100%;
     }
 
     .logo {
-      font-size: 28px;
-      font-weight: 700;
-      letter-spacing: -1px;
+      font: 700 28px Georgia, serif;
     }
 
     .logo span {
-      color: var(--brown);
+      color: var(--accent);
     }
 
-    .nav-links {
+    .links {
       display: flex;
-      gap: 30px;
+      gap: 26px;
       list-style: none;
-    }
-
-    .nav-links a {
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    .nav-links a:hover {
-      color: var(--brown);
+    .links a:hover {
+      color: var(--accent);
     }
 
     .menu {
       display: none;
-      font-size: 25px;
+      font-size: 26px;
+      background: none;
+      border: 0;
       cursor: pointer;
     }
 
     /* HERO */
 
     .hero {
-      min-height: 600px;
-
+      min-height: 570px;
       display: flex;
       align-items: center;
 
-      padding: 80px 7%;
-
       background:
         linear-gradient(
-          rgba(248,245,239,0.65),
-          rgba(248,245,239,0.9)
+          90deg,
+          rgba(248,245,239,.96),
+          rgba(248,245,239,.65)
         ),
-        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=80");
-
-      background-size: cover;
-      background-position: center;
+        url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
     }
 
-    .hero-content {
+    .hero-inner {
+      padding: 80px 0;
       max-width: 650px;
     }
 
-    .hero-small {
+    .eyebrow {
       text-transform: uppercase;
       letter-spacing: 3px;
+      color: var(--accent);
       font-size: 12px;
-      font-weight: bold;
-      color: var(--brown);
-      margin-bottom: 15px;
+      font-weight: 800;
+      margin-bottom: 14px;
     }
 
-    .hero h1 {
-      font-family: Georgia, serif;
-      font-size: clamp(45px, 7vw, 82px);
-      line-height: 1.05;
-      margin-bottom: 25px;
+    h1 {
+      font: 700 clamp(44px, 7vw, 76px)/1.04 Georgia, serif;
+      margin-bottom: 22px;
     }
 
     .hero p {
       font-size: 18px;
-      max-width: 550px;
-      margin-bottom: 35px;
-      color: #555;
+      color: var(--muted);
+      max-width: 570px;
+      margin-bottom: 30px;
     }
 
-    .button {
+    .btn {
       display: inline-block;
-      background: var(--dark);
-      color: white;
-
-      padding: 15px 28px;
+      background: var(--ink);
+      color: #fff;
+      padding: 14px 24px;
       border-radius: 30px;
-
-      font-weight: bold;
       font-size: 14px;
-
-      transition: 0.3s;
+      font-weight: 800;
     }
 
-    .button:hover {
-      background: var(--brown);
-      transform: translateY(-2px);
+    .btn:hover {
+      background: var(--accent);
     }
 
-    /* SECTION */
+    /* GENERAL SECTIONS */
 
     section {
-      padding: 80px 7%;
+      padding: 75px 0;
     }
 
-    .section-heading {
+    .heading {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
 
-    .section-heading span {
-      color: var(--brown);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-weight: bold;
+    .heading h2 {
+      font: 700 40px Georgia, serif;
     }
 
-    .section-heading h2 {
-      font-family: Georgia, serif;
-      font-size: 42px;
-      margin-top: 10px;
+    .heading p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 8px auto;
     }
 
     /* CATEGORIES */
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(4,1fr);
+      gap: 18px;
     }
 
-    .category {
-      height: 260px;
-      border-radius: 15px;
+    .cat {
+      height: 240px;
+      border-radius: 16px;
       overflow: hidden;
       position: relative;
-
-      background-size: cover;
-      background-position: center;
-
-      display: flex;
-      align-items: flex-end;
+      background: center/cover;
     }
 
-    .category::after {
+    .cat:after {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.65));
+      background: linear-gradient(
+        transparent,
+        rgba(0,0,0,.7)
+      );
     }
 
-    .category-content {
-      position: relative;
-      z-index: 2;
-      color: white;
-      padding: 25px;
+    .cat div {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      z-index: 1;
     }
 
-    .category h3 {
-      font-size: 23px;
-      margin-bottom: 5px;
+    .cat h3 {
+      font: 700 24px Georgia, serif;
+    }
+
+    .cat p {
+      font-size: 13px;
     }
 
     /* PRODUCTS */
 
+    .featured {
+      background: var(--soft);
+    }
+
     .products {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
+      grid-template-columns: repeat(4,1fr);
+      gap: 22px;
     }
 
     .product {
-      background: white;
+      background: #fff;
+      border: 1px solid var(--line);
       border-radius: 15px;
       overflow: hidden;
-      border: 1px solid var(--border);
-      transition: 0.3s;
     }
 
-    .product:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    .product img {
+      height: 230px;
+      object-fit: cover;
     }
 
-    .product-image {
-      height: 260px;
+    .info {
+      padding: 18px;
+    }
+
+    .tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .info h3 {
+      font-size: 17px;
+      margin: 6px 0;
+    }
+
+    .info p {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .coming {
+      display: block;
+      text-align: center;
+      background: #f1ece6;
+      padding: 10px;
+      border-radius: 8px;
+      color: #6b5a4d;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .note {
+      margin-top: 18px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ARTICLES */
+
+    .ideas {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .article {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 15px;
       overflow: hidden;
     }
 
-    .product-image img {
-      width: 100%;
-      height: 100%;
+    .article img {
+      height: 210px;
       object-fit: cover;
-      transition: 0.4s;
     }
 
-    .product:hover img {
-      transform: scale(1.05);
-    }
-
-    .product-info {
+    .article div {
       padding: 20px;
     }
 
-    .product-category {
-      color: var(--brown);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: bold;
+    .article h3 {
+      font: 700 21px Georgia, serif;
+      margin: 6px 0;
     }
 
-    .product h3 {
-      margin: 8px 0;
-      font-size: 17px;
-    }
-
-    .product p {
+    .article p {
       font-size: 13px;
-      color: #777;
-      margin-bottom: 15px;
+      color: var(--muted);
     }
 
-    .product-button {
-      display: block;
-      text-align: center;
-      padding: 11px;
-      background: var(--dark);
-      color: white;
-      border-radius: 7px;
-      font-size: 13px;
-      font-weight: bold;
+    /* ABOUT */
+
+    .about {
+      background: #25221f;
+      color: #fff;
     }
 
-    .product-button:hover {
-      background: var(--brown);
-    }
-
-    /* TRENDING */
-
-    .trending {
-      background: #ebe4db;
-    }
-
-    .trend-box {
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 45px;
-      border-radius: 20px;
-
-      display: flex;
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 55px;
       align-items: center;
-      gap: 40px;
     }
 
-    .trend-box img {
-      width: 45%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 15px;
-    }
-
-    .trend-content h2 {
-      font-family: Georgia, serif;
-      font-size: 36px;
+    .about h2 {
+      font: 700 40px Georgia, serif;
       margin-bottom: 15px;
     }
 
-    .trend-content p {
-      color: #666;
-      margin-bottom: 25px;
+    .about p {
+      color: #d5d0cb;
     }
 
-    /* NEWSLETTER */
-
-    .newsletter {
-      text-align: center;
-      background: var(--dark);
-      color: white;
+    .points {
+      display: grid;
+      gap: 14px;
     }
 
-    .newsletter h2 {
-      font-family: Georgia, serif;
-      font-size: 40px;
-      margin-bottom: 15px;
+    .point {
+      padding: 18px;
+      border: 1px solid #4b4743;
+      border-radius: 12px;
     }
 
-    .newsletter p {
-      color: #ccc;
-      margin-bottom: 25px;
+    .point b {
+      display: block;
+      margin-bottom: 4px;
     }
 
-    .newsletter-form {
-      display: flex;
-      max-width: 500px;
-      margin: auto;
+    /* LEGAL */
+
+    .legal {
+      padding: 55px 0;
     }
 
-    .newsletter-form input {
-      flex: 1;
-      padding: 15px;
-      border: none;
-      outline: none;
-      border-radius: 30px 0 0 30px;
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
     }
 
-    .newsletter-form button {
-      padding: 15px 25px;
-      border: none;
-      background: var(--brown);
-      color: white;
-      font-weight: bold;
-      border-radius: 0 30px 30px 0;
-      cursor: pointer;
+    .legal article {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+    }
+
+    .legal h3 {
+      margin-bottom: 8px;
+    }
+
+    .legal p {
+      font-size: 13px;
+      color: var(--muted);
     }
 
     /* FOOTER */
@@ -383,7 +395,7 @@
     footer {
       background: #171614;
       color: #aaa;
-      padding: 45px 7%;
+      padding: 40px 0;
     }
 
     .footer-grid {
@@ -392,55 +404,62 @@
       gap: 40px;
     }
 
-    footer h3 {
-      color: white;
-      margin-bottom: 15px;
+    .footer-grid h3 {
+      color: #fff;
+      margin-bottom: 10px;
     }
 
-    footer a {
+    .footer-grid a {
       display: block;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    footer a:hover {
-      color: white;
+      font-size: 13px;
+      margin: 5px 0;
     }
 
     .copyright {
       border-top: 1px solid #333;
-      margin-top: 35px;
-      padding-top: 20px;
-      font-size: 12px;
+      margin-top: 30px;
+      padding-top: 18px;
+      font-size: 11px;
+    }
+
+    /* TABLET */
+
+    @media(max-width:900px) {
+
+      .categories,
+      .products {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .legal-grid {
+        grid-template-columns: 1fr;
+      }
+
     }
 
     /* MOBILE */
 
-    @media (max-width: 900px) {
+    @media(max-width:650px) {
 
-      .categories,
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .trend-box {
-        flex-direction: column;
-      }
-
-      .trend-box img {
-        width: 100%;
-      }
-
-    }
-
-    @media (max-width: 650px) {
-
-      nav {
-        padding: 0 5%;
-      }
-
-      .nav-links {
+      .links {
         display: none;
+        position: absolute;
+        top: 72px;
+        right: 5%;
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 12px 30px #0002;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .links.open {
+        display: flex;
       }
 
       .menu {
@@ -448,505 +467,641 @@
       }
 
       .hero {
-        padding: 70px 5%;
-        min-height: 550px;
+        min-height: 540px;
       }
 
-      section {
-        padding: 60px 5%;
+      .hero-inner {
+        padding: 65px 0;
       }
 
       .categories,
-      .products {
+      .products,
+      .ideas {
         grid-template-columns: 1fr;
       }
 
-      .section-heading h2 {
-        font-size: 34px;
-      }
-
-      .trend-box {
-        padding: 25px;
-      }
-
-      .newsletter-form {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .newsletter-form input,
-      .newsletter-form button {
-        border-radius: 30px;
+      .heading h2 {
+        font-size: 33px;
       }
 
       .footer-grid {
         grid-template-columns: 1fr;
       }
+
     }
 
   </style>
 </head>
 
+
 <body>
+
 
   <!-- NAVIGATION -->
 
   <nav>
 
-    <a href="#" class="logo">
-      Trend<span>ora</span>
-    </a>
+    <div class="container nav-inner">
 
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#categories">Categories</a></li>
-      <li><a href="#trending">Trending</a></li>
-      <li><a href="#products">Shop Finds</a></li>
-    </ul>
+      <a class="logo" href="#home">
+        Trend<span>ora</span>
+      </a>
 
-    <div class="menu">☰</div>
+      <button class="menu" aria-label="Open menu">
+        ☰
+      </button>
+
+      <ul class="links">
+
+        <li>
+          <a href="#categories">Categories</a>
+        </li>
+
+        <li>
+          <a href="#finds">Trending Finds</a>
+        </li>
+
+        <li>
+          <a href="#ideas">Ideas</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+      </ul>
+
+    </div>
 
   </nav>
 
 
   <!-- HERO -->
 
-  <section class="hero" id="home">
+  <main>
 
-    <div class="hero-content">
+    <section class="hero" id="home">
 
-      <div class="hero-small">
-        Curated Home Finds
-      </div>
+      <div class="container">
 
-      <h1>
-        Make Your Space Feel Like Home.
-      </h1>
+        <div class="hero-inner">
 
-      <p>
-        Discover beautiful, practical and trending home decor finds
-        carefully selected to help you create a space you'll love.
-      </p>
+          <div class="eyebrow">
+            Curated for Indian homes
+          </div>
 
-      <a href="#products" class="button">
-        Explore Trending Finds →
-      </a>
+          <h1>
+            Make your home feel more like you.
+          </h1>
 
-    </div>
+          <p>
+            Trendora discovers stylish, practical and affordable
+            home finds for modern Indian homes—from small-space
+            organization to cozy bedroom and living-room upgrades.
+          </p>
 
-  </section>
+          <a class="btn" href="#finds">
+            Explore Our Finds →
+          </a>
 
-
-  <!-- CATEGORIES -->
-
-  <section id="categories">
-
-    <div class="section-heading">
-
-      <span>Explore</span>
-
-      <h2>Shop By Style</h2>
-
-    </div>
-
-
-    <div class="categories">
-
-      <a class="category"
-        href="#products"
-        style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80')">
-
-        <div class="category-content">
-          <h3>Living Room</h3>
-          <p>Cozy & stylish finds</p>
         </div>
-
-      </a>
-
-
-      <a class="category"
-        href="#products"
-        style="background-image:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=800&q=80')">
-
-        <div class="category-content">
-          <h3>Bedroom</h3>
-          <p>Relaxing essentials</p>
-        </div>
-
-      </a>
-
-
-      <a class="category"
-        href="#products"
-        style="background-image:url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=800&q=80')">
-
-        <div class="category-content">
-          <h3>Kitchen</h3>
-          <p>Smart kitchen finds</p>
-        </div>
-
-      </a>
-
-
-      <a class="category"
-        href="#products"
-        style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80')">
-
-        <div class="category-content">
-          <h3>Minimal Decor</h3>
-          <p>Simple & elegant</p>
-        </div>
-
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- TRENDING -->
-
-  <section class="trending" id="trending">
-
-    <div class="trend-box">
-
-      <img
-        src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=80"
-        alt="Modern home decor"
-      />
-
-      <div class="trend-content">
-
-        <div class="hero-small">
-          Trend Alert
-        </div>
-
-        <h2>
-          Warm Minimalism
-        </h2>
-
-        <p>
-          Neutral tones, natural textures and simple shapes are
-          transforming modern interiors. Discover affordable pieces
-          that can give your home the same aesthetic.
-        </p>
-
-        <a href="#products" class="button">
-          See The Finds →
-        </a>
 
       </div>
 
-    </div>
-
-  </section>
+    </section>
 
 
-  <!-- PRODUCTS -->
+    <!-- CATEGORIES -->
 
-  <section id="products">
+    <section id="categories">
 
-    <div class="section-heading">
+      <div class="container">
 
-      <span>Our Picks</span>
+        <div class="heading">
 
-      <h2>Trending Home Finds</h2>
+          <div class="eyebrow">
+            Explore
+          </div>
 
-    </div>
-
-
-    <div class="products">
-
-
-      <!-- PRODUCT 1 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80"
-            alt="Decorative lamp"
-          />
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Lighting
-          </span>
-
-          <h3>Modern Table Lamp</h3>
+          <h2>
+            Shop by Category
+          </h2>
 
           <p>
-            A simple statement piece for bedrooms,
-            desks and living rooms.
+            Start with the room or style you want to improve.
           </p>
 
+        </div>
+
+
+        <div class="categories">
+
+
           <a
-            href="YOUR-AFFILIATE-LINK-1"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="product-button"
+            class="cat"
+            href="#finds"
+            style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85')"
           >
-            View Product →
+
+            <div>
+
+              <h3>
+                Living Room
+              </h3>
+
+              <p>
+                Comfort & style
+              </p>
+
+            </div>
+
           </a>
 
+
+          <a
+            class="cat"
+            href="#finds"
+            style="background-image:url('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85')"
+          >
+
+            <div>
+
+              <h3>
+                Bedroom
+              </h3>
+
+              <p>
+                Cozy upgrades
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="cat"
+            href="#finds"
+            style="background-image:url('https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=85')"
+          >
+
+            <div>
+
+              <h3>
+                Kitchen
+              </h3>
+
+              <p>
+                Useful everyday finds
+              </p>
+
+            </div>
+
+          </a>
+
+
+          <a
+            class="cat"
+            href="#finds"
+            style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85')"
+          >
+
+            <div>
+
+              <h3>
+                Organization
+              </h3>
+
+              <p>
+                Less clutter, more space
+              </p>
+
+            </div>
+
+          </a>
+
+
         </div>
 
-      </article>
+      </div>
+
+    </section>
 
 
-      <!-- PRODUCT 2 -->
+    <!-- TRENDING FINDS -->
 
-      <article class="product">
+    <section class="featured" id="finds">
 
-        <div class="product-image">
+      <div class="container">
 
-          <img
-            src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
-            alt="Modern chair"
-          />
+        <div class="heading">
 
-        </div>
+          <div class="eyebrow">
+            Coming soon
+          </div>
 
-        <div class="product-info">
-
-          <span class="product-category">
-            Furniture
-          </span>
-
-          <h3>Minimal Accent Chair</h3>
+          <h2>
+            Trending Home Finds
+          </h2>
 
           <p>
-            Add a comfortable modern touch
-            to your reading corner.
+            We're building a curated list of products
+            available to shoppers in India.
           </p>
 
-          <a
-            href="YOUR-AFFILIATE-LINK-2"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="product-button"
-          >
-            View Product →
-          </a>
+        </div>
+
+
+        <div class="products">
+
+
+          <!-- PRODUCT 1 -->
+
+          <article class="product">
+
+            <img
+              src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=85"
+              alt="Home decor inspiration"
+            >
+
+            <div class="info">
+
+              <span class="tag">
+                Lighting
+              </span>
+
+              <h3>
+                Modern Table Lamp
+              </h3>
+
+              <p>
+                A simple way to warm up a bedroom,
+                desk or living room.
+              </p>
+
+              <span class="coming">
+                Product link coming soon
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 2 -->
+
+          <article class="product">
+
+            <img
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=85"
+              alt="Modern chair"
+            >
+
+            <div class="info">
+
+              <span class="tag">
+                Furniture
+              </span>
+
+              <h3>
+                Accent Chair
+              </h3>
+
+              <p>
+                A practical statement piece for
+                a reading corner or bedroom.
+              </p>
+
+              <span class="coming">
+                Product link coming soon
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 3 -->
+
+          <article class="product">
+
+            <img
+              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85"
+              alt="Decorative home styling"
+            >
+
+            <div class="info">
+
+              <span class="tag">
+                Decor
+              </span>
+
+              <h3>
+                Neutral Decor
+              </h3>
+
+              <p>
+                Simple textures and tones that
+                work across Indian interiors.
+              </p>
+
+              <span class="coming">
+                Product link coming soon
+              </span>
+
+            </div>
+
+          </article>
+
+
+          <!-- PRODUCT 4 -->
+
+          <article class="product">
+
+            <img
+              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85"
+              alt="Organized modern home"
+            >
+
+            <div class="info">
+
+              <span class="tag">
+                Organization
+              </span>
+
+              <h3>
+                Smart Storage
+              </h3>
+
+              <p>
+                Useful organizers for making
+                small spaces easier to live in.
+              </p>
+
+              <span class="coming">
+                Product link coming soon
+              </span>
+
+            </div>
+
+          </article>
+
 
         </div>
 
-      </article>
 
-
-      <!-- PRODUCT 3 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=800&q=80"
-            alt="Home decor"
-          />
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Decor
-          </span>
-
-          <h3>Neutral Decorative Vase</h3>
-
-          <p>
-            An easy way to add texture and
-            personality to your home.
-          </p>
-
-          <a
-            href="YOUR-AFFILIATE-LINK-3"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="product-button"
-          >
-            View Product →
-          </a>
-
-        </div>
-
-      </article>
-
-
-      <!-- PRODUCT 4 -->
-
-      <article class="product">
-
-        <div class="product-image">
-
-          <img
-            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80"
-            alt="Home accessories"
-          />
-
-        </div>
-
-        <div class="product-info">
-
-          <span class="product-category">
-            Accessories
-          </span>
-
-          <h3>Modern Decorative Tray</h3>
-
-          <p>
-            Perfect for coffee tables,
-            consoles and countertops.
-          </p>
-
-          <a
-            href="YOUR-AFFILIATE-LINK-4"
-            target="_blank"
-            rel="nofollow sponsored noopener"
-            class="product-button"
-          >
-            View Product →
-          </a>
-
-        </div>
-
-      </article>
-
-
-    </div>
-
-  </section>
-
-
-  <!-- NEWSLETTER -->
-
-  <section class="newsletter">
-
-    <h2>Get The Trend Report</h2>
-
-    <p>
-      New home decor finds, styling ideas and trending products.
-    </p>
-
-    <form class="newsletter-form">
-
-      <input
-        type="email"
-        placeholder="Enter your email"
-        required
-      />
-
-      <button type="submit">
-        Subscribe
-      </button>
-
-    </form>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="footer-grid">
-
-      <div>
-
-        <h3>Trendora</h3>
-
-        <p>
-          Discover stylish home decor products,
-          ideas and trends curated for modern homes.
+        <p class="note">
+          Prices and availability will be shown only after
+          products and current listings are added.
         </p>
 
       </div>
 
+    </section>
 
-      <div>
 
-        <h3>Explore</h3>
+    <!-- HOME IDEAS -->
 
-        <a href="#categories">Categories</a>
-        <a href="#trending">Trending</a>
-        <a href="#products">Shop Finds</a>
+    <section id="ideas">
+
+      <div class="container">
+
+        <div class="heading">
+
+          <div class="eyebrow">
+            Inspiration
+          </div>
+
+          <h2>
+            Home Ideas Worth Saving
+          </h2>
+
+          <p>
+            Practical inspiration designed for real homes
+            and real budgets.
+          </p>
+
+        </div>
+
+
+        <div class="ideas">
+
+
+          <article class="article">
+
+            <img
+              src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=85"
+              alt="Warm minimalist interior"
+            >
+
+            <div>
+
+              <div class="tag">
+                Decor
+              </div>
+
+              <h3>
+                How to create a warm minimalist home
+              </h3>
+
+              <p>
+                Use texture, neutral tones and a few
+                intentional pieces instead of filling
+                every corner.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="article">
+
+            <img
+              src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=900&q=85"
+              alt="Organized kitchen"
+            >
+
+            <div>
+
+              <div class="tag">
+                Kitchen
+              </div>
+
+              <h3>
+                Simple ways to make a small kitchen work better
+              </h3>
+
+              <p>
+                Focus on vertical storage, frequently used
+                items and clutter-free surfaces.
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article class="article">
+
+            <img
+              src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=900&q=85"
+              alt="Cozy bedroom"
+            >
+
+            <div>
+
+              <div class="tag">
+                Bedroom
+              </div>
+
+              <h3>
+                Small bedroom upgrades that change the mood
+              </h3>
+
+              <p>
+                Lighting, bedding, mirrors and smart storage
+                can make a noticeable difference.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
 
       </div>
 
+    </section>
 
-      <div>
 
-        <h3>Information</h3>
+    <!-- ABOUT -->
 
-        <a href="#">About Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Affiliate Disclosure</a>
-        <a href="#">Contact</a>
+    <section class="about" id="about">
+
+      <div class="container about-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            About Trendora
+          </div>
+
+          <h2>
+            Better finds. Less scrolling.
+          </h2>
+
+          <p>
+            Trendora is an Indian home-discovery website
+            focused on finding useful, attractive and
+            reasonably priced products for everyday spaces.
+            We research ideas and products so you can spend
+            less time searching and more time creating a home
+            you enjoy.
+          </p>
+
+        </div>
+
+
+        <div class="points">
+
+          <div class="point">
+
+            <b>
+              Curated
+            </b>
+
+            <span>
+              We focus on useful products rather than
+              endless catalogs.
+            </span>
+
+          </div>
+
+
+          <div class="point">
+
+            <b>
+              India-focused
+            </b>
+
+            <span>
+              Our content is made for shoppers and
+              homes in India.
+            </span>
+
+          </div>
+
+
+          <div class="point">
+
+            <b>
+              Transparent
+            </b>
+
+            <span>
+              When affiliate links are used, we'll
+              clearly disclose them.
+            </span>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+    </section>
 
 
-    <div class="copyright">
+    <!-- LEGAL / INFORMATION -->
 
-      © 2026 Trendora. All rights reserved.
+    <section class="legal">
 
-    </div>
+      <div class="container">
 
-  </footer>
-
-
-  <script>
-
-    // Mobile menu
-
-    const menu = document.querySelector(".menu");
-    const navLinks = document.querySelector(".nav-links");
-
-    menu.addEventListener("click", () => {
-
-      if (navLinks.style.display === "flex") {
-
-        navLinks.style.display = "none";
-
-      } else {
-
-        navLinks.style.display = "flex";
-        navLinks.style.flexDirection = "column";
-        navLinks.style.position = "absolute";
-        navLinks.style.top = "72px";
-        navLinks.style.right = "5%";
-        navLinks.style.background = "white";
-        navLinks.style.padding = "20px";
-        navLinks.style.borderRadius = "10px";
-        navLinks.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
-
-      }
-
-    });
+        <div class="legal-grid">
 
 
-    // Newsletter
+          <article id="disclosure">
 
-    document
-      .querySelector(".newsletter-form")
-      .addEventListener("submit", function(e) {
+            <h3>
+              Affiliate Disclosure
+            </h3>
 
-        e.preventDefault();
+            <p>
+              Some links on Trendora may be affiliate links.
+              If you purchase through an affiliate link,
+              Trendora may earn a commission at no additional
+              cost to you. Product prices and availability
+              can change on the retailer's website.
+            </p>
 
-        alert(
-          "Thanks for subscribing to Trendora!"
-        );
+          </article>
 
-      });
 
-  </script>
+          <article id="privacy">
 
-</body>
-  </html>
+            <h3>
+              Privacy
+            </h3>
+
+            <p>
+              Trendora aims to collect only information
+              necessary to operate the website and improve
+              the visitor experience. This page will be
+              expanded with the site's final analytics,
+              cookie and contact practices before launch.
+            </p>
+
+          </article>
+
+
+          <article id="contact">
+
+            <h3>
+              Contact
+            </h3>
+
+            <p>
+              For product suggestions,
